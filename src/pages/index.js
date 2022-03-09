@@ -35,7 +35,6 @@ const checkoutOption = {
   cancelUrl: `${window.location.origin}/cancel`,
 }
 const redirectToCheckout = async () => {
-  console.log('redirectToCheckout')
   const stripe = await getStripe()
   const { error } = await stripe.redirectToCheckout(checkoutOption)
   console.log('stripe checkout error', error)
