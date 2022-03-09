@@ -1,0 +1,61 @@
+{
+  "name": "stipe-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.3.1",
+    "@mui/lab": "^5.0.0-alpha.55",
+    "@mui/material": "^5.1.1",
+    "@stripe/stripe-js": "^1.24.0",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.3",
+    "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "gatsby": "^4.1.6",
+    "gatsby-plugin-emotion": "^7.2.0",
+    "gatsby-plugin-image": "^2.2.0",
+    "gatsby-plugin-layout": "^3.9.0",
+    "gatsby-plugin-material-ui": "^4.1.0",
+    "gatsby-plugin-react-helmet": "^5.2.0",
+    "gatsby-plugin-sharp": "^4.3.0",
+    "gatsby-source-filesystem": "^4.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-scripts": "5.0.0",
+    "stripe": "^8.207.0",
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.17"
+  },
+  "scripts": {
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "serve": "gatsby serve",
+    "clean": "rm -rf public && rm -rf .cache",
+    "dev": "NODE_ENV=development rm -rf ./.cache && yarn && gatsby develop -H 0.0.0.0",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "yarn develop",
+    "prebuild": "gatsby clean && yarn clean && yarn"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
