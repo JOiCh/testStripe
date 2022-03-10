@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkstipe_test=self.webpackChunkstipe_test||[]).push([[866],{6024:function(t,e,s){s.r(e);s(7294);var u=s(3431);e.default=function(){return(0,u.tZ)("h2",null,"success!!!!!!!!!!")}}}]);
+//# sourceMappingURL=component---src-pages-success-js-3d6d783419a132e06279.js.map
