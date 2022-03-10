@@ -32,7 +32,7 @@
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
     "clean": "rm -rf public && rm -rf .cache",
-    "dev": "NODE_ENV=development rm -rf ./.cache && yarn && gatsby develop -H 0.0.0.0",
+    "dev": "NODE_ENV=development yarn && gatsby develop -H 0.0.0.0",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "yarn develop",
