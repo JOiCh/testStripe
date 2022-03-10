@@ -3,6 +3,10 @@ import { Link } from 'gatsby'
 import Grid from '@mui/material/Grid'
 import { Button, List, ListItem, ListItemText } from '@mui/material'
 
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from '@mui/material'
+import theme from './../theme/theme'
+
 export default function layout({ children }) {
   const menuWidth = '210px'
   const menuItems = [
@@ -13,6 +17,9 @@ export default function layout({ children }) {
   ]
 
   return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+  
     <Grid
       container
       style={{
@@ -82,5 +89,6 @@ export default function layout({ children }) {
         {children}
       </Grid>
     </Grid>
+    </ThemeProvider>
   )
 }

@@ -9,10 +9,8 @@ import { Box } from '@mui/material'
 import Pug from '../images/pug-big.png'
 import Layout from '../layouts'
 import getStripe from '../utils/stripe'
-//stripe package
 
 import { FaxRounded } from '@mui/icons-material'
-
 
 // item u want to sell
 const item = {
