@@ -14180,24 +14180,24 @@ if (false) {} else {
 /***/ }),
 
 /***/ "react-dom/server":
-/*!***************************************************************************************************!*\
-  !*** external "/Users/joi/Documents/candyhouse/test/testStripe/node_modules/react-dom/server.js" ***!
-  \***************************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** external "/Users/xuxiangjie/Desktop/work-coding-files/testStripe/node_modules/react-dom/server.js" ***!
+  \**********************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/Users/joi/Documents/candyhouse/test/testStripe/node_modules/react-dom/server.js");
+module.exports = require("/Users/xuxiangjie/Desktop/work-coding-files/testStripe/node_modules/react-dom/server.js");
 
 /***/ }),
 
 /***/ "react":
-/*!**********************************************************************************************!*\
-  !*** external "/Users/joi/Documents/candyhouse/test/testStripe/node_modules/react/index.js" ***!
-  \**********************************************************************************************/
+/*!*****************************************************************************************************!*\
+  !*** external "/Users/xuxiangjie/Desktop/work-coding-files/testStripe/node_modules/react/index.js" ***!
+  \*****************************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/Users/joi/Documents/candyhouse/test/testStripe/node_modules/react/index.js");
+module.exports = require("/Users/xuxiangjie/Desktop/work-coding-files/testStripe/node_modules/react/index.js");
 
 /***/ }),
 

@@ -1,14 +1,14 @@
 var plugins = [{
       name: 'gatsby-plugin-image',
-      plugin: require('/Users/joi/Documents/candyhouse/test/testStripe/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
+      plugin: require('/Users/xuxiangjie/Desktop/work-coding-files/testStripe/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-react-helmet',
-      plugin: require('/Users/joi/Documents/candyhouse/test/testStripe/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
+      plugin: require('/Users/xuxiangjie/Desktop/work-coding-files/testStripe/node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
       name: 'default-site-plugin',
-      plugin: require('/Users/joi/Documents/candyhouse/test/testStripe/gatsby-ssr.js'),
+      plugin: require('/Users/xuxiangjie/Desktop/work-coding-files/testStripe/gatsby-ssr.js'),
       options: {"plugins":[]},
     }]
 /* global plugins */

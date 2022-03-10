@@ -20,7 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Cancel = () => {
-  return (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", null, "cancel");
+  return (0,_emotion_react__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", null, "cancel!!!");
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Cancel);
