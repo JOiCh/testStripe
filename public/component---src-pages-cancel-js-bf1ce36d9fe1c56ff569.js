@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkstipe_test=self.webpackChunkstipe_test||[]).push([[120],{3165:function(t,e,n){n.r(e);n(7294);var s=n(3431);e.default=function(){return(0,s.tZ)("h2",null,"cancel")}}}]);
+//# sourceMappingURL=component---src-pages-cancel-js-bf1ce36d9fe1c56ff569.js.map

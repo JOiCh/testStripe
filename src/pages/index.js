@@ -31,8 +31,8 @@ const item = {
 const checkoutOption = {
   lineItems: [item],
   mode: 'payment',
-  successUrl: `${window.location.origin}/success`,
-  cancelUrl: `${window.location.origin}/cancel`,
+  successUrl: `http://localhost:8000/success`,
+  cancelUrl: `http://localhost:8000/cancel`,
 }
 const redirectToCheckout = async () => {
   const stripe = await getStripe()

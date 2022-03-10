@@ -10306,7 +10306,7 @@ let stripePromise;
 
 const getStripe = () => {
   if (!stripePromise) {
-    stripePromise = (0,_stripe_stripe_js_pure__WEBPACK_IMPORTED_MODULE_3__.loadStripe)(({}).GATSBY_STRIPE_PUBLISHABLE_KEY); //not let otherd know your key
+    stripePromise = (0,_stripe_stripe_js_pure__WEBPACK_IMPORTED_MODULE_3__.loadStripe)("pk_test_51KZALEIJlvNDy7qbeSBwBygyNX8NyusvMQVPPDL4uTKJ9uLbqVkce4muuifCAZ3M7eRVfo6qzKktfaSFavyQwRHv00qBpUZiqj"); //not let otherd know your key
   }
 
   return stripePromise;
@@ -10320,12 +10320,11 @@ const item = {
 const checkoutOption = {
   lineItems: [item],
   mode: 'payment',
-  successUrl: `${window.location.origin}/success`,
-  cancelUrl: `${window.location.origin}/cancel`
+  successUrl: `http://localhost:8000/success`,
+  cancelUrl: `http://localhost:8000/cancel`
 };
 
 const redirectToCheckout = async () => {
-  console.log('redirectToCheckout');
   const stripe = await getStripe();
   const {
     error

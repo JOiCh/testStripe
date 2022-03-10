@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-success-js-3d6d783419a132e06279.js","mappings":"0IAMA,UAJgB,WACd,OAAO","sources":["webpack://stipe-test/./src/pages/success.js"],"sourcesContent":["import React from 'react'\n\nconst Success = () => {\n  return <h2>success!!!!!!!!!!</h2>\n}\n\nexport default Success\n"],"names":[],"sourceRoot":""}

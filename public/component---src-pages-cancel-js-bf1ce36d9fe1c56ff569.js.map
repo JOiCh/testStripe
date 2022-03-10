@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-cancel-js-bf1ce36d9fe1c56ff569.js","mappings":"0IAMA,UAJe,WACb,OAAO","sources":["webpack://stipe-test/./src/pages/cancel.js"],"sourcesContent":["import React from 'react'\n\nconst Cancel = () => {\n  return <h2>cancel</h2>\n}\n\nexport default Cancel\n"],"names":[],"sourceRoot":""}
