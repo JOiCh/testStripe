@@ -1,32 +1,61 @@
 import React from 'react'
-import {CardElement} from '@stripe/react-stripe-js'
+import Layout from '../layouts'
+import {
+  CardElement,
+  Elements,
+  useElements,
+  useStripe,
+} from '@stripe/react-stripe-js'
+// import StatusMessages, {useMessages} from './../StatusMessages'
 
-export default function PaymentForm () {
-    const handleSubmit = async(e) => {
-        e.preventDefault()
-        console.log('yoyoyo');
-    } 
-    const CARD_ELEMENT_OPTIONS = {
-        style: {
-            base: {
-                color: '#32325d',
-                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-                fontSmoothing: 'antialiased',
-                fontSize: '16px',
-                '::placeholder': {
-                    color: '#aab7c4',
-                },
-            },
-            invalid: {
-                color: '#fa755a',
-                iconColor: '#fa755a',
-            },
-        },
+export default function PaymentJOi() {
+  const stripe = useStripe()
+  const elements = useElements()
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    const card = elements.getElement(CardElement)
+    if (!stripe || !elements) {
+      return
     }
-    return (
-        <form onSubmit={handleSubmit}>
-            <CardElement options={CARD_ELEMENT_OPTIONS}/>
-            <button>Pay</button>
-        </form>
-    )
+
+    console.log('card ele', card)
+    console.log('stripe', stripe)
+
+    // 製造支付 on server
+    const { clientSecret } = await fetch('/create-payment-intent', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        paymentMethodType: 'card',
+        currency: 'usd',
+      }).then((res) => res.json()),
+    })
+    alert('payment intent created')
+
+    // 客戶端確認支付
+    const { paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+      payment_method: {
+        card: elements.getElement(CardElement),
+      },
+    })
+    console.log(paymentIntent.id, ':', paymentIntent.status)
+  }
+  return (
+    // <Elements stripe={getStripe()}>
+    <form onSubmit={handleSubmit}>
+      <CardElement />
+      <button
+        onClick={() => {
+          console.log('stripe', stripe)
+        }}
+      >
+        Pay
+      </button>
+    </form>
+    // </Elements>
+  )
 }

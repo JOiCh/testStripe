@@ -7,88 +7,99 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { ThemeProvider } from '@mui/material'
 import theme from './../theme/theme'
 
-export default function layout({ children }) {
+export default function Layout({ children }) {
   const menuWidth = '210px'
   const menuItems = [
     {
       text: 'checkout page',
       path: '/',
     },
+    {
+      text: 'JesPayment',
+      path: '/jesPayment',
+    },
+    {
+      text: 'JOiPayment',
+      path: '/joiPayment',
+    },
   ]
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-  
-    <Grid
-      container
-      style={{
-        backgroundColor: '#EEEEEE',
-        width: '100%',
-        height: '100%',
-      }}
-    >
+
       <Grid
-        item
-        sx={{
-          backgroundColor: (theme) => theme.palette.primary.main,
-          color: '#fff',
-          padding: '30px 15px',
+        container
+        style={{
+          backgroundColor: '#EEEEEE',
+          width: '100%',
           height: '100%',
-          width: menuWidth,
-          position: 'fixed',
-          left: '0px',
-          top: '0px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
         }}
       >
-        <List sx={{ height: '100%' }}>
-          {menuItems.map((item) => (
-            <ListItem
-              button
-              key={item.text}
-              component={Link}
-              to={item.path}
-              activeClassName='itemActive'
-              // partiallyActive={true}
-              sx={{
-                padding: 0,
-                color: '#fff',
-                opacity: '.7',
-                cursor: 'pointer',
-                ':hover': {
-                  opacity: '1',
-                },
-                '&.itemActive': {
-                  opacity: '1',
-                  backgroundColor: 'rgba(0, 0, 0, 0.05)',
-                },
-              }}
-            >
-              <ListItemText
-                primary={item.text}
-                sx={{ '& > span': { fontWeight: 'bold' } }}
-              />
-            </ListItem>
-          ))}
-        </List>
-        <Button
-          variant='contained'
-          color='secondary'
-          size='small'
-          sx={{ marginTop: '20px' }}
-          fullWidth
+        <Grid
+          item
+          sx={{
+            backgroundColor: (theme) => theme.palette.primary.main,
+            color: '#fff',
+            padding: '30px 15px',
+            height: '100%',
+            width: menuWidth,
+            position: 'fixed',
+            left: '0px',
+            top: '0px',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+          }}
         >
-          Sign Out
-        </Button>
-      </Grid>
+          <List sx={{ height: '100%' }}>
+            {menuItems.map((item) => (
+              <ListItem
+                button
+                key={item.text}
+                component={Link}
+                to={item.path}
+                activeClassName='itemActive'
+                // partiallyActive={true}
+                sx={{
+                  padding: 0,
+                  color: '#fff',
+                  opacity: '.7',
+                  cursor: 'pointer',
+                  ':hover': {
+                    opacity: '1',
+                  },
+                  '&.itemActive': {
+                    opacity: '1',
+                    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                  },
+                }}
+              >
+                <ListItemText
+                  primary={item.text}
+                  sx={{ '& > span': { fontWeight: 'bold' } }}
+                />
+              </ListItem>
+            ))}
+          </List>
+          <Button
+            variant='contained'
+            color='secondary'
+            size='small'
+            sx={{ marginTop: '20px' }}
+            fullWidth
+          >
+            Sign Out
+          </Button>
+        </Grid>
 
-      <Grid item sx={{ width: '100%', height: '100%', marginLeft: menuWidth }}>
-        {children}
+        <Grid
+          item
+          sx={{ width: '100%', height: '100%', marginLeft: menuWidth }}
+        >
+          {children}
+        </Grid>
       </Grid>
-    </Grid>
     </ThemeProvider>
   )
 }

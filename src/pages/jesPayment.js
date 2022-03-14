@@ -1,9 +1,10 @@
 import React from 'react'
 import PaymentJes from '../components/PaymentJes'
+import Layout from '../layouts'
 export default function jesPayment() {
   return (
-    <div>
+    <Layout>
       <PaymentJes />
-    </div>
+    </Layout>
   )
 }
